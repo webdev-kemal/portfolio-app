@@ -70,9 +70,9 @@ const Header = () => {
     };
   }, []);
 
-  const toggleShit = () => {
-    console.log("31");
-  };
+  // const toggleShit = () => {
+  //   console.log("31");
+  // };
 
   const handleClick = (e, anchor) => {
     e.preventDefault();

@@ -8,37 +8,33 @@ const projects = [
     title: "Web Tasarımı",
     description:
       "Mobile-first responsive web tasarımınızı yapar, yumuşak geçişleri ve kullanıcı etkileşimi olan arayüzler oluştururum.",
-    getImageSrc: () => require("../images/photo1.jpg"),
+    // getImageSrc: () => require("../images/photo1.jpg"),
   },
   {
     title: "Sosyal Medya",
     description:
-      "Canva, Photoshop ve video düzenleme uygulamalarına hakimim, ayrıca dijital reklam ve pazarlama işlerinizi de yaparım.",
-    getImageSrc: () => require("../images/photo2.jpg"),
+      "Canva, Photoshop ve video düzenleme uygulamalarına hakimim, ayrıca dijital reklam ve takip işlerinizi de yaparım.",
+    // getImageSrc: () => require("../images/photo2.jpg"),
   },
   {
     title: "SEO Yazarlığı ",
     description:
       "Türkçe, İngilizce ve Fransızca Google'da sizi öne çıkartacak içerik üretirim. Özgün, anahtar kelimelerle blog yazarım.",
-    getImageSrc: () => require("../images/photo3.jpg"),
   },
   {
     title: "E-Ticaret Entegrasyonu",
     description:
-      "Websitenize herhangi bir platformda sanal pos, trendyol/hepsiburada veya google adwords gibi entegrasyonları yaparım.",
-    getImageSrc: () => require("../images/photo4.jpg"),
+      "Websitenize herhangi bir platformda sanal pos, trendyol/hepsiburada veya Google adwords gibi entegrasyonları yaparım.",
   },
   {
     title: "OpenAI Saas",
     description:
-      "Websitenize OpenAI api ile yapay zeka chatbotu, veya diğer gömülü uygulamaları uçtan uca yazabilir implemente ederim.",
-    getImageSrc: () => require("../images/photo4.jpg"),
+      "Websitenize OpenAI api ile yapay zeka chatbotu, veya diğer gömülü uygulamaları uçtan uca yazar ve implemente ederim.",
   },
   {
     title: "Sürdürülebilirlik",
     description:
-      "İş ne olursa olsun yeşil yasaya uygun şekilde yaparım. Sadelik, geri dönüşüm ve tasarruf prensibini takip ederim.",
-    getImageSrc: () => require("../images/photo4.jpg"),
+      "İş ne olursa olsun yeşil yasayı dikkate alarak ilerlerim. Sadelik, geri dönüşüm ve tasarruf sözümü tutmak için emek harcarım.",
   },
 ];
 
@@ -47,19 +43,19 @@ const projectmobile = [
     title: "Web Tasarımı",
     description:
       "Mobile-first responsive web tasarımınızı yapar, yumuşak geçişleri ve kullanıcı etkileşimi olan arayüzler oluştururum.",
-    getImageSrc: () => require("../images/photo1.jpg"),
+    // getImageSrc: () => require("../images/photo1.jpg"),
   },
   {
     title: "Sosyal Medya",
     description:
-      "Canva, Photoshop ve video düzenleme uygulamalarıyla içerik üretir, ayrıca dijital reklam ve reklam takibi işlerinizi de yaparım.",
-    getImageSrc: () => require("../images/photo2.jpg"),
+      "Canva, Photoshop ve video düzenleme uygulamalarıyla içerik üretir, ayrıca dijital reklam ve reklam analiz işlerinizi de yaparım.",
+    // getImageSrc: () => require("../images/photo2.jpg"),
   },
   {
     title: "SEO Yazarlığı ",
     description:
-      "Türkçe, İngilizce ve Fransızca olarak Google'da sizi öne çıkartacak içerik üretirim. Özgün, anahtar kelimelerle blog yazarım.",
-    getImageSrc: () => require("../images/photo3.jpg"),
+      "Türkçe, İngilizce ve Fransızca dilinde sizi Google'da öne çıkaracak içerik üretir, seçtiğiniz anahtar kelimelerle blog yazarım.",
+    // getImageSrc: () => require("../images/photo3.jpg"),
   },
 ];
 

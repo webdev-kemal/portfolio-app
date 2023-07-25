@@ -1,7 +1,16 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
+import { keyframes } from "@emotion/react";
 import { Text, HStack, IconButton, useMediaQuery } from "@chakra-ui/react";
+
+const spin = keyframes`
+from {
+  transform: rotateY(0deg);
+}
+to {
+  transform: rotateY(180deg);
+}
+`;
 
 const Desktop = ({ socials, handleClick }) => {
   return (
@@ -15,8 +24,9 @@ const Desktop = ({ socials, handleClick }) => {
               key={item.url}
               href={item.url}
               target="_blank"
-              transition="transform 0.5s"
+              transition="transform .5s"
               _hover={{ transform: "rotateY(180deg)" }}
+              // _hover={{ animation: `${spin} 0.3s linear ` }}
               w="100%"
               h="100%"
             >

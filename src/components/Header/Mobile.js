@@ -130,7 +130,7 @@ const Mobile = ({ handleClick }) => {
                   href="/#projects-section"
                   fontSize="23px"
                 >
-                  Projeler
+                  Servisler
                 </Text>
                 <Text
                   as="a"

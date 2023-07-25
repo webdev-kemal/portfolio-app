@@ -14,7 +14,7 @@ import {
 
 const greeting = "iş birliği için formu doldurun";
 const bio1 = "dev.kemal </>";
-const bio2 = "React Web Developer & Dilbilim Uzmanı";
+const bio2 = "Web Geliştiricisi & Dilbilim Uzmanı";
 
 // Implement the UI for the LandingSection component according to the instructions.
 // Use a combination of Avatar, Heading and VStack components.

@@ -112,7 +112,7 @@ const LandingSection = () => {
                 </FormErrorMessage>
               </FormControl>
               <FormControl>
-                <FormLabel htmlFor="type">Rica türünüz</FormLabel>
+                <FormLabel htmlFor="type">Rica türü</FormLabel>
                 <Select
                   id="type"
                   name="type"
@@ -124,7 +124,7 @@ const LandingSection = () => {
                     Freelance iş teklifi
                   </option>
                   <option value="openSource" color="black">
-                    İnstagram iş birliği
+                    İnstagram dayanışma
                   </option>
                   <option value="other">Diğer</option>
                 </Select>
