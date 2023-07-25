@@ -1,5 +1,5 @@
 import React from "react";
-import { Avatar, Heading, VStack, Button } from "@chakra-ui/react";
+import { Avatar, Heading, VStack, Button, Text } from "@chakra-ui/react";
 import FullScreenSection from "./FullScreenSection";
 import { useTheme } from "../context/themeContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -14,7 +14,7 @@ import {
 
 const greeting = "iş birliği için formu doldurun";
 const bio1 = "dev.kemal </>";
-const bio2 = "Gözden Geçirebilirsin!";
+const bio2 = "React Web Developer & Dilbilim Uzmanı";
 
 // Implement the UI for the LandingSection component according to the instructions.
 // Use a combination of Avatar, Heading and VStack components.
@@ -26,19 +26,21 @@ const LandingSection = () => {
       justifyContent="center"
       alignItems="center"
       isDarkBackground
-      backgroundColor="#2A4365"
+      backgroundColor="#2A4365" //old green
+      // backgroundColor="#16161d"
     >
       <VStack>
-        {/* <Avatar
+        <Avatar
           name={greeting}
-          size="xl"
-          src={`https://i.pravatar.cc/150?img=7`}
-        ></Avatar> */}
+          size="2xl"
+          // src={`https://i.pravatar.cc/150?img=7`}
+          src={`https://i.ibb.co/cT7BjNP/removal-ai-cbbed5af-b367-4c12-a22e-d1928b38e819-logom.png" alt="removal-ai-cbbed5af-b367-4c12-a22e-d1928b38e819-logom`}
+        ></Avatar>
         {/* <Heading as="h3" size="sm" marginBottom={4}>
           {greeting}
         </Heading> */}
         <Heading as="h1">{bio1}</Heading>
-        {/* <Heading>{bio2}</Heading> */}
+        <Text as="p">{bio2}</Text>
       </VStack>
 
       <VStack>

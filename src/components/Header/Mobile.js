@@ -22,10 +22,15 @@ const socials = [
 
     url: "https://www.instagram.com/dev.kemal/",
   },
-  {
-    name: "Linkedin",
+  // {
+  //   name: "Linkedin",
 
-    url: "https://www.linkedin.com/in/adib-mokhtari-43814a216",
+  //   url: "https://www.linkedin.com/in/adib-mokhtari-43814a216",
+  // },
+  {
+    name: "Bionluk",
+
+    url: "https://bionluk.com/kemaldikkulak",
   },
   {
     name: "Github",
@@ -146,6 +151,8 @@ const Mobile = ({ handleClick }) => {
                   fontSize="18px"
                 >
                   Kemal Dikkulak
+                  <br />
+                  Galatasaray Üniversitesi
                 </Text>
               </VStack>
             </DrawerBody>

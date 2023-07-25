@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faBars } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -17,7 +17,7 @@ const socials = [
   {
     name: "E-Posta",
     icon: faEnvelope,
-    url: "mailto: hello@example.com",
+    url: "mailto: okandikkulak@gmail.com",
   },
   {
     name: "Github",
@@ -35,9 +35,9 @@ const socials = [
     url: "https://www.instagram.com/dev.kemal/",
   },
   {
-    name: "Deviant",
+    name: "Bionluk",
     icon: faStackOverflow,
-    url: "https://stackoverflow.com",
+    url: "https://bionluk.com/kemaldikkulak",
   },
 ];
 

@@ -63,17 +63,17 @@ const LandingSection = () => {
       <VStack
         w="100%"
         minWidth={{
-          base: "200px",
-          sm: "100px",
-          md: "200px",
-          lg: "400px",
+          base: "350px",
+          sm: "330px",
+          md: "380px",
+          lg: "420px",
           xl: "600px",
         }}
         alignItems="flex-start"
       >
         {/* <Text>{isLargerThan1280 ? "desktop" : "mobile"}</Text> */}
-        <Heading as="h1" id="contactme-section">
-          Contact me
+        <Heading as="h1" mb={5} id="contactme-section">
+          Bana ulaşın
         </Heading>
         <Box rounded="md" w="100%">
           <form onSubmit={formik.handleSubmit}>
@@ -83,7 +83,7 @@ const LandingSection = () => {
                   formik.touched.firstName && Boolean(formik.errors.firstName)
                 }
               >
-                <FormLabel htmlFor="firstName">Name</FormLabel>
+                <FormLabel htmlFor="firstName">İsminiz</FormLabel>
                 <Input
                   id="firstName"
                   name="firstName"
@@ -98,7 +98,7 @@ const LandingSection = () => {
               <FormControl
                 isInvalid={formik.touched.email && Boolean(formik.errors.email)}
               >
-                <FormLabel htmlFor="email">Email Address</FormLabel>
+                <FormLabel htmlFor="email">E-postanız</FormLabel>
                 <Input
                   id="email"
                   name="email"
@@ -112,7 +112,7 @@ const LandingSection = () => {
                 </FormErrorMessage>
               </FormControl>
               <FormControl>
-                <FormLabel htmlFor="type">Type of enquiry</FormLabel>
+                <FormLabel htmlFor="type">Rica türünüz</FormLabel>
                 <Select
                   id="type"
                   name="type"
@@ -120,11 +120,13 @@ const LandingSection = () => {
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
                 >
-                  <option value="hireMe">Freelance project proposal</option>
-                  <option value="openSource">
-                    Open source consultancy session
+                  <option value="hireMe" color="black">
+                    Freelance iş teklifi
                   </option>
-                  <option value="other">Other</option>
+                  <option value="openSource" color="black">
+                    İnstagram iş birliği
+                  </option>
+                  <option value="other">Diğer</option>
                 </Select>
               </FormControl>
               <FormControl
@@ -132,7 +134,7 @@ const LandingSection = () => {
                   formik.touched.comment && Boolean(formik.errors.comment)
                 }
               >
-                <FormLabel htmlFor="comment">Your message</FormLabel>
+                <FormLabel htmlFor="comment">Mesajınız</FormLabel>
                 <Textarea
                   id="comment"
                   name="comment"
@@ -151,7 +153,7 @@ const LandingSection = () => {
                 width="full"
                 isLoading={isLoading}
               >
-                Submit
+                Gönder
               </Button>
             </VStack>
           </form>

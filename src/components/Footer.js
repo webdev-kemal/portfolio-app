@@ -15,7 +15,7 @@ const Footer = () => {
           height={16}
         >
           {/* <p>Okan • © 2023</p> */}
-          <p>Kemal Dikkulak</p>
+          <p>dev.kemal • © 2023</p>
         </Flex>
       </footer>
     </Box>
