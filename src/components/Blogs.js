@@ -1,25 +1,33 @@
 import React, { useEffect, useRef } from "react";
-import { Avatar, Heading, VStack, Button, Box, Text } from "@chakra-ui/react";
+import {
+  Avatar,
+  Heading,
+  VStack,
+  Button,
+  Box,
+  Text,
+  Link,
+} from "@chakra-ui/react";
 import FullScreenSection from "./FullScreenSection";
 import { useTheme } from "../context/themeContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 import { gsap } from "gsap";
-import { useNavigate } from "react-router-dom";
+// import InstagramEmbed from "react-instagram-embed";
 
 const greeting = "Kemal Dikkulak";
-const bio1 = "dev.kemal </>";
-const bio2 = "Web Geliştiricisi & Fransızca Öğretmeni";
-const bio3 =
-  "React, Redux, Axios, REST API, Linux, Git, CI, Django, Docker, AWS, EC2, S3";
-// Implement the UI for the LandingSection component according to the instructions.
+const bio1 = "goksoydil.com";
+const bio2 = "lingslide.com";
+const desc1 =
+  "React (Chakra) + Django + AWS ve sanal pos ile yayınladığım kurs yükleme ve satın alma sitesi.";
+const desc2 = "lorem17lorem15lorem15lorem15";
+
+// Implement the UI for the Blogs component according to the instructions.
 // Use a combination of Avatar, Heading and VStack components.
-const LandingSection = () => {
+const Blogs = () => {
   const { theme, toggleTheme, hasJustTriggered } = useTheme();
   const avatarRef = useRef(null);
   const bgRef = useRef(null);
-
-  const navigate = useNavigate();
 
   useEffect(() => {
     gsap.to(avatarRef.current, {
@@ -32,6 +40,8 @@ const LandingSection = () => {
       ease: "power1.inOut", // smooth start and end
     });
   }, []);
+
+  const instagramEmbedLink = "https://www.instagram.com/p/CyF0w16tLtJ/";
 
   return (
     <div>
@@ -53,13 +63,13 @@ const LandingSection = () => {
           {/* <Heading as="h3" size="sm" marginBottom={4}>
               {greeting}
             </Heading> */}
-          <Heading as="h1">{bio1}</Heading>
-          <Text as="p">{bio2}</Text>
-          <Box bg="rgba(0,0,0,0.2)" w="70%">
-            <Text textAlign={"center"} w="90%" mx="auto" as="h4">
-              {bio3}
-            </Text>
-          </Box>
+          {/* <Heading as="h1">{bio1}</Heading> */}
+          <Heading as="h1" to={bio1}>
+            {bio1}
+          </Heading>
+          <Text as="p">{desc1}</Text>
+          <Heading as="h1">{bio2}</Heading>
+          <Text as="p">{desc2}</Text>
         </VStack>
         <VStack>
           <Button
@@ -78,19 +88,10 @@ const LandingSection = () => {
               <FontAwesomeIcon icon={faSun}></FontAwesomeIcon>
             )}
           </Button>
-          {/* <Link
-            as="a"
-            onClick={() => {
-              navigate("/blogs");
-            }}
-            _hover={{ cursor: "pointer" }}
-          >
-            Projelerim
-          </Link> */}
         </VStack>
       </FullScreenSection>
     </div>
   );
 };
 
-export default LandingSection;
+export default Blogs;

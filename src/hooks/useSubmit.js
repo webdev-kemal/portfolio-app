@@ -1,4 +1,6 @@
 import { useState } from "react";
+import db from "../firebase";
+import { collection, addDoc } from "firebase/firestore";
 
 const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
@@ -11,21 +13,24 @@ const useSubmit = () => {
   const [response, setResponse] = useState(null);
 
   const submit = async (url, data) => {
-    const random = Math.random();
+    // const random = Math.random();
+
     setLoading(true);
+
     try {
-      await wait(2000);
-      if (random < 0.5) {
-        throw new Error("Something went wrong");
-      }
+      // await wait(2000);
+      // if (random < 0.5) {
+      //   throw new Error("Something went wrong");
+      // }
+      const docRef = await addDoc(collection(db, "submissions"), data);
       setResponse({
         type: "success",
-        message: `E-postanızı aldım ${data.firstName}, size hemen geri döneceğim!`,
+        message: `E-postanızı tarafıma ulaştı ${data.name}, geri dönüş yapacağım.`,
       });
     } catch (error) {
       setResponse({
         type: "error",
-        message: "Lütfen doğrudan okandikkulak@gmail.com adresime yazın",
+        message: `Hata: ${error}`,
       });
     } finally {
       setLoading(false);

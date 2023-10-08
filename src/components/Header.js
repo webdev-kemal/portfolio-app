@@ -27,24 +27,24 @@ const socials = [
   {
     name: "Linkedin",
     icon: faLinkedin,
-    url: "https://www.linkedin.com/in/adib-mokhtari-43814a216",
+    url: "https://www.linkedin.com/in/mustafa-kemal-okan-dikkulak-b35251286/",
   },
   {
     name: "Instagram",
     icon: faInstagram,
     url: "https://www.instagram.com/dev.kemal/",
   },
-  {
-    name: "Bionluk",
-    icon: faStackOverflow,
-    url: "https://bionluk.com/kemaldikkulak",
-  },
+  // {
+  //   name: "Bionluk",
+  //   icon: faStackOverflow,
+  //   url: "https://bionluk.com/kemaldikkulak",
+  // },
 ];
 
 const Header = () => {
   const [isLargerThanMobile] = useMediaQuery("(min-width: 768px)");
   const headerRef = useRef(null);
-  const { theme } = useTheme();
+  const { theme, bgColur } = useTheme();
 
   useEffect(() => {
     let lastScrollPos = window.scrollY;
@@ -89,6 +89,7 @@ const Header = () => {
 
   return (
     <Box
+      zIndex="10"
       ref={headerRef}
       position={"fixed"}
       top={0}
@@ -98,7 +99,9 @@ const Header = () => {
       transitionProperty="transform, background-color"
       transitionDuration=".3s"
       transitionTimingFunction="ease-in-out"
-      backgroundColor={theme === "light" ? "#18181b" : "#18181b"}
+      // backgroundColor={theme === "light" ? bgColur : "#DE8971"}
+      backgroundColor={bgColur}
+      color={theme === "light" ? "black" : "white"}
     >
       <Box color="white" maxWidth="1280px" margin="0 auto" id="header">
         {isLargerThanMobile ? (

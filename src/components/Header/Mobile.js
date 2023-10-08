@@ -22,11 +22,11 @@ const socials = [
 
     url: "https://www.instagram.com/dev.kemal/",
   },
-  // {
-  //   name: "Linkedin",
+  {
+    name: "Linkedin",
 
-  //   url: "https://www.linkedin.com/in/adib-mokhtari-43814a216",
-  // },
+    url: "https://www.linkedin.com/in/mustafa-kemal-okan-dikkulak-b35251286/",
+  },
   {
     name: "Bionluk",
 
@@ -35,13 +35,18 @@ const socials = [
   {
     name: "Github",
 
-    url: " https://github.com/webdev-kemal",
+    url: "https://github.com/webdev-kemal",
+  },
+  {
+    name: "Projelerim",
+
+    url: "/blogs",
   },
 ];
 
 const Mobile = ({ handleClick }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const { theme } = useTheme();
+  const { theme, bgColur } = useTheme();
   return (
     <Grid
       templateColumns="1fr 5fr 1fr"
@@ -70,7 +75,7 @@ const Mobile = ({ handleClick }) => {
         textAlign="center"
         color={theme === "light" ? "#ffffff" : "#ffffff"}
       >
-        kemal-webdev
+        dev.kemal
       </Text>
 
       {/* Empty column */}
@@ -84,12 +89,13 @@ const Mobile = ({ handleClick }) => {
       >
         <DrawerOverlay>
           <DrawerContent
-            bg={theme === "light" ? "#ffffff" : "#000000"}
+            bg={theme === "light" ? bgColur : "#16161d"}
+            color={theme === "light" ? "#ffffff" : "#ffffff"}
             p={3}
             spacing={2}
           >
             <DrawerCloseButton
-              color={theme === "light" ? "#000000" : "#ffffff"}
+              color={theme === "light" ? "#ffffff" : "#ffffff"}
               p={5}
               size="2xl"
             />
@@ -100,10 +106,7 @@ const Mobile = ({ handleClick }) => {
             >
               Menu
             </DrawerHeader> */}
-            <DrawerBody
-              fontSize="2xl"
-              color={theme === "light" ? "#000000" : "#ffffff"}
-            >
+            <DrawerBody fontSize="2xl">
               <VStack py={10} spacing={4} h="100%">
                 {socials.map((item) => (
                   <>
@@ -144,12 +147,7 @@ const Mobile = ({ handleClick }) => {
                 </Text>
 
                 <Spacer />
-                <Text
-                  color={theme === "light" ? "#000000" : "#ffffff"}
-                  textalign="left"
-                  w="100%"
-                  fontSize="18px"
-                >
+                <Text textalign="left" w="100%" fontSize="18px">
                   Kemal Dikkulak
                   <br />
                   Galatasaray Üniversitesi
